@@ -35,8 +35,8 @@ public class ItemArrayAdapter extends RecyclerView.Adapter<ItemArrayAdapter.View
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int listPosition) {
-        holder.title.setText(itemList.get(listPosition).getDescription());
-        holder.description.setText(itemList.get(listPosition).getTitle());
+        holder.title.setText(itemList.get(listPosition).getTitle());
+        holder.description.setText(itemList.get(listPosition).getDescription());
         holder.imageView.setImageResource(itemList.get(listPosition).getImage());
         boolean isExpanded = itemList.get(listPosition).isExpanded();
         holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
